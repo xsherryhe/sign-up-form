@@ -1,5 +1,13 @@
+html {
+  font-size: calc(3px + 0.5vh + 0.5vw);
+}
+
 body {
-  font-size: 3rem;
+  font-size: 2rem;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
 body::before {
@@ -11,6 +19,14 @@ body::before {
   height: 100%;
   background: url('../images/ice-cream.jpg') no-repeat;
   background-size: auto 100vh;
+}
+
+#banner {
+  flex: 2;
+}
+
+form {
+  flex: 3;
 }
 
 p {
