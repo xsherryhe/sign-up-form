@@ -5,7 +5,15 @@
 
 :root {
   --banner-color: #fcfbf4;
+  --banner-container-bg-color: rgba(0, 0, 0, 0.5);
+  --text-color: black;
+  --logo-fonts: logo-font, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+  --text-fonts: 'Helvetica Neue', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Open Sans', sans-serif;
   font-size: calc(8px + 0.75vh + 0.75vw);
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
@@ -38,13 +46,13 @@ body::before {
   align-items: center;
   position: absolute;
   top: 10rem;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: var(--banner-container-bg-color);
   height: 9rem;
   width: 100%;
 }
 
 #logo-text {
-  font-family: logo-font;
+  font-family: var(--logo-fonts);
   font-weight: bold;
   font-size: 3.2rem;
   margin: 0;
@@ -53,6 +61,22 @@ body::before {
 
 #logo {
   height: 8rem;
+}
+
+#photo-credit {
+  position: absolute;
+  background-color: var(--banner-container-bg-color);
+  color: var(--banner-color);
+  font-family: var(--text-fonts);
+  font-size: 0.85rem;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  padding: 0.4rem 0 0.4rem;
+}
+
+a:link, a:visited {
+  color: var(--banner-color);
 }
 
 form {
