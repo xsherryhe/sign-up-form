@@ -6,6 +6,7 @@
 :root {
   --banner-color: #fcfbf4;
   --banner-container-bg-color: rgba(0, 0, 0, 0.5);
+  --form-bg-color: #ffffff;
   --text-color: black;
   --logo-fonts: logo-font, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
   --text-fonts: 'Helvetica Neue', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Open Sans', sans-serif;
@@ -79,6 +80,44 @@ a:link, a:visited {
   color: var(--banner-color);
 }
 
-form {
+main {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
   flex: 2;
+  background-color: var(--banner-color);
+}
+
+main > * {
+  padding-left: 3rem;
+}
+
+#intro {
+  padding-right: 6rem;
+  padding-bottom: 3rem;
+}
+
+p {
+  font-family: var(--text-fonts);
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin: 1.5rem 0 1.5rem 0;
+}
+
+form {
+  background-color: var(--form-bg-color);
+  box-shadow: 0.1rem 0.2rem 0.6rem #cccccc;
+  padding-bottom: 2rem;
+  padding-right: 12rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 3rem;
+}
+
+.form-input {
+  flex: 1;
+  display: flex;
+  flex-flow: column;
 }
