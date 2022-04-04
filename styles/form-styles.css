@@ -10,10 +10,13 @@
   --text-color: black;
   --label-color: #5b5b5b;
   --box-shadow-color: #cccccc;
+  --widget-box-shadow: 0.1rem 0.1rem 0.6rem var(--box-shadow-color);
+  --input-border-color: #E5E7EB;
+  --closing-color: #ff8c9f;
+  --hover-closing-color: #ff6680;
   --logo-fonts: logo-font, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
   --text-fonts: 'Helvetica Neue', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Open Sans', sans-serif;
   --banner-min-width: 20rem;
-  --input-border-color: #E5E7EB;
   font-size: calc(8px + 0.4vh + 0.4vw);
 }
 
@@ -92,6 +95,7 @@ form {
   flex-flow: column;
   justify-content: center;
   background-color: var(--banner-color);
+  font-family: var(--text-fonts);
 }
 
 fieldset {
@@ -105,21 +109,21 @@ fieldset {
 }
 
 p, legend {
-  font-family: var(--text-fonts);
   font-size: 1.25rem;
   font-weight: 500;
   margin: 1.5rem 0 0.5rem 0;
 }
 
 legend {
-  position: relative;
-  top: 1.75rem;
+  position: absolute;
+  top: -0.5rem;
 }
 
 #main {
+  position: relative;
   background-color: var(--form-bg-color);
   box-shadow: 0.1rem 0.2rem 0.6rem var(--box-shadow-color);
-  padding-top: 2.75rem;
+  padding-top: 4rem;
   padding-bottom: 2rem;
   padding-right: 12rem;
 }
@@ -140,7 +144,6 @@ legend {
   flex: 1;
   display: flex;
   flex-flow: column;
-  font-family: var(--text-fonts);
 }
 
 label {
@@ -155,12 +158,14 @@ label {
 input {
   border: var(--input-border-color) solid 0.1rem;
   border-radius: 0.2rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
 }
 
 input:focus {
   outline-style: solid;
   outline-width: 0.08rem;
-  box-shadow: 0.1rem 0.1rem 0.6rem var(--box-shadow-color);
+  box-shadow: var(--widget-box-shadow);
 }
 
 input:invalid:not(:placeholder-shown) {
@@ -173,9 +178,33 @@ input:invalid:not(:placeholder-shown) {
 }
 
 button {
-  padding: 0.4rem 2.4rem;
+  background-color: var(--closing-color);
+  color: var(--form-bg-color);
+  font-size: 0.85rem;
+  font-weight: bold;
+  width: 11rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: 0.4rem;
+  box-shadow: var(--widget-box-shadow);
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: var(--hover-closing-color);
+}
+
+#closing > p {
+  font-size: 0.9rem;
+  font-weight: 400;
 }
 
 #closing a:link, #closing a:visited {
-  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--closing-color);
+}
+
+#closing a:hover {
+  color: var(--hover-closing-color);
 }
