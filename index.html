@@ -14,49 +14,53 @@
     </div>
     <footer id="photo-credit">Photo by <a href="https://unsplash.com/@brookelark">Brooke Lark</a> on <a href="https://unsplash.com">Unsplash</a></footer>
   </section>
-  <main>
-    <div id="intro">
+  <form action="" method="post">
+    <fieldset id="intro">
       <p>Do you love ice cream? If so, then you should register for the Sweet Scoops online ice cream service. 
       There will be new ice cream flavors delivered to your virtual doorstep every day.</p>
       <p>Sign up <em>now</em> to get started.</p>
-    </div>
-    <form action="" method="post">
-      <p>Enter your info!</p>
+    </fieldset>
+    <fieldset id="main">
+      <legend>Enter your info!</legend>
 
-      <div class="form-row">
-        <div class="form-input">
-          <label for="first-name">First Name</label>
-          <input required type="text" id="first-name" name="first_name">
+      <div id="form-rows">
+        <div class="form-row">
+          <div class="form-input">
+            <label for="first-name">First Name</label>
+            <input required type="text" id="first-name" name="first_name" placeholder = " ">
+          </div>
+          <div class="form-input">
+            <label for="last-name">Last Name</label>
+            <input required type="text" id="last-name" name="last_name" placeholder = " ">
+          </div>
         </div>
-        <div class="form-input">
-          <label for="last-name">Last Name</label>
-          <input required type="text" id="last-name" name="last_name">
+        <div class="form-row">
+          <div class="form-input">
+            <label for="email-address">Email</label>
+            <input type="email" id="email-address" name="email_address" placeholder = " ">
+          </div>
+          <div class="form-input">
+            <label for="phone-number">Phone Number</label>
+            <input type="tel" id="phone-number" name="phone_number" placeholder = " ">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-input">
+            <label for="password">Password</label>
+            <input required type="password" id="password" name="password" placeholder = " ">
+          </div>
+          <div class="form-input">
+            <label for="pw-confirm">Confirm Password</label>
+            <input required type="password" id="pw-confirm" name="pw_confirm" placeholder = " ">
+          </div>
         </div>
       </div>
-
-      <div class="form-row">
-        <div class="form-input">
-          <label for="email-address">Email</label>
-          <input required type="email" id="email-address" name="email_address">
-        </div>
-        <div class="form-input">
-          <label for="phone-number">Phone Number</label>
-          <input required type="tel" id="phone-number" name="phone_number">
-        </div>
-      </div>
-
-      <div class="form-row">
-        <div class="form-input">
-          <label for="password">Password</label>
-          <input required type="password" id="password" name="password">
-        </div>
-        <div class="form-input">
-          <label for="pw-confirm">Confirm Password</label>
-          <input required type="password" id="pw-confirm" name="pw_confirm">
-        </div>
-      </div>
-    </form>
-  </main>
+    </fieldset>
+    <fieldset id="closing">
+      <button type="submit">Create Account</button>
+      <p>Already have an account? <a href="#">Log in</a></p>
+    </fieldset>
+  </form>
 
 </body>
 </html>
