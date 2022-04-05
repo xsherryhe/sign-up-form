@@ -175,11 +175,13 @@ input:focus {
   box-shadow: var(--widget-box-shadow);
 }
 
-input:invalid:not(:focus):not(:placeholder-shown) {
+input:invalid:not(:focus):not(:placeholder-shown):not(.hide-validity),
+input:invalid.submit-attempt {
   outline: red solid 0.08rem;
 }
 
-input:invalid:not(:focus):not(:placeholder-shown) ~ .error-message {
+input:invalid:not(:focus):not(:placeholder-shown):not(.hide-validity) ~ .error-message,
+input:invalid.submit-attempt ~ .error-message {
   display: inline;
 }
 
