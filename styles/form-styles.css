@@ -100,16 +100,16 @@ form {
 
 fieldset {
   border: none;
-  padding-left: 3rem;
+  padding-left: 2.5rem;
 }
 
 #intro {
   padding-right: 6rem;
-  padding-bottom: 2rem;
+  padding-bottom: 2.5rem;
 }
 
 p, legend {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 500;
   margin: 1.5rem 0 0.5rem 0;
 }
@@ -123,7 +123,7 @@ legend {
   position: relative;
   background-color: var(--form-bg-color);
   box-shadow: 0.1rem 0.2rem 0.6rem var(--box-shadow-color);
-  padding-top: 4rem;
+  padding-top: 3.5rem;
   padding-bottom: 2rem;
   padding-right: 12rem;
 }
@@ -147,7 +147,7 @@ legend {
 }
 
 label {
-  font-size: 0.65rem;
+  font-size: 0.6rem;
   font-weight: 600;
   color: var(--label-color);
   text-transform: uppercase;
@@ -158,7 +158,7 @@ label {
 input {
   border: var(--input-border-color) solid 0.1rem;
   border-radius: 0.2rem;
-  padding: 0.3rem 0.4rem;
+  padding: 0.2rem 0.3rem;
 }
 
 form .error-message {
@@ -186,8 +186,8 @@ input:invalid.submit-attempt ~ .error-message {
 }
 
 #closing {
-  padding-top: 2rem;
-  padding-bottom: 5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 2.5rem;
 }
 
 button {
@@ -196,7 +196,7 @@ button {
   font-size: 0.85rem;
   font-weight: bold;
   width: 11rem;
-  height: 2.5rem;
+  height: 2.25rem;
   border: none;
   border-radius: 0.4rem;
   box-shadow: var(--widget-box-shadow);
@@ -208,7 +208,7 @@ button:hover {
 }
 
 #closing > p {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 400;
 }
 

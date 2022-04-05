@@ -10,7 +10,7 @@ function setFormEvents() {
           })
  
   formInputs.forEach(input => input.addEventListener('input', removeSubmitAttemptClass));
-  [password, passwordConfirm].forEach(input => input.addEventListener('input', togglePasswordMatchError));
+  [password, passwordConfirm].forEach(input => input.addEventListener('input', togglePasswordMatchMessage));
 }
 setFormEvents();
 
@@ -30,7 +30,7 @@ function checkPasswordMatch() {
   passwordError.textContent = match ? 'Password is required' : 'Passwords do not match';
 }
 
-function togglePasswordMatchError() {
+function togglePasswordMatchMessage() {
   const fieldsEmpty = !password.value || !passwordConfirm.value;
   [password, passwordConfirm].forEach(input => {
     input.classList.remove('submit-attempt');
