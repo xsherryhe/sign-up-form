@@ -28,30 +28,36 @@
           <div class="form-input">
             <label for="first-name">First Name</label>
             <input required type="text" id="first-name" name="first_name" placeholder = " ">
+            <p class="error-message">First name is required</p>
           </div>
           <div class="form-input">
             <label for="last-name">Last Name</label>
             <input required type="text" id="last-name" name="last_name" placeholder = " ">
+            <p class="error-message">Last name is required</p>
           </div>
         </div>
         <div class="form-row">
           <div class="form-input">
             <label for="email-address">Email</label>
             <input type="email" id="email-address" name="email_address" placeholder = " ">
+            <p class="error-message">Invalid e-mail address</p>
           </div>
           <div class="form-input">
             <label for="phone-number">Phone Number</label>
-            <input type="tel" id="phone-number" name="phone_number" placeholder = " ">
+            <input type="tel" id="phone-number" name="phone_number" pattern="(.*\d.*){10,12}" placeholder = " ">
+            <p class="error-message">Invalid telephone number</p>
           </div>
         </div>
         <div class="form-row">
           <div class="form-input">
             <label for="password">Password</label>
             <input required type="password" id="password" name="password" placeholder = " ">
+            <p class="error-message">Password is required</p>
           </div>
           <div class="form-input">
             <label for="pw-confirm">Confirm Password</label>
             <input required type="password" id="pw-confirm" name="pw_confirm" placeholder = " ">
+            <p class="error-message">Passwords do not match</p>
           </div>
         </div>
       </div>

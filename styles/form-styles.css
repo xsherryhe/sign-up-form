@@ -158,8 +158,15 @@ label {
 input {
   border: var(--input-border-color) solid 0.1rem;
   border-radius: 0.2rem;
-  padding-top: 0.2rem;
-  padding-bottom: 0.2rem;
+  padding: 0.3rem 0.4rem;
+}
+
+form .error-message {
+  display: none;
+  margin: 0.1rem;
+  color: red;
+  font-size: 0.8rem;
+  font-weight: 400;
 }
 
 input:focus {
@@ -168,8 +175,12 @@ input:focus {
   box-shadow: var(--widget-box-shadow);
 }
 
-input:invalid:not(:placeholder-shown) {
-  outline-color: red;
+input:invalid:not(:focus):not(:placeholder-shown) {
+  outline: red solid 0.08rem;
+}
+
+input:invalid:not(:focus):not(:placeholder-shown) ~ .error-message {
+  display: inline;
 }
 
 #closing {
