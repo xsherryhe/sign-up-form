@@ -158,7 +158,9 @@ label {
 input {
   border: var(--input-border-color) solid 0.1rem;
   border-radius: 0.2rem;
+  height: 2rem;
   padding: 0.2rem 0.3rem;
+  font-size: 0.95rem;
 }
 
 form .error-message {
