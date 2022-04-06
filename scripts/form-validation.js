@@ -31,9 +31,6 @@ function checkPasswordMatch() {
 }
 
 function togglePasswordMatchMessage() {
-  const fieldsEmpty = !password.value || !passwordConfirm.value;
-  [password, passwordConfirm].forEach(input => {
-    input.classList.remove('submit-attempt');
-    fieldsEmpty ? input.classList.add('hide-validity') : input.classList.remove('hide-validity');
-  })
+  checkPasswordMatch();
+  [password, passwordConfirm].forEach(input => input.classList.remove('submit-attempt'));
 }
