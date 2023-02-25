@@ -8,7 +8,7 @@ The project primarily demonstrates various HTML and CSS tools and skills includi
 
 ## Preview
 
-![Sweet Scoops Sign-Up Form preview](./images/preview.png).
+![Sweet Scoops Sign-Up Form preview](./images/preview.png)
 
 Run this project [here](https://xsherryhe.github.io/sign-up-form/).
 
